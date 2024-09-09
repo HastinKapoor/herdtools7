@@ -1,0 +1,11 @@
+X86 SC
+include "x86fences.cat"
+include "filters.cat"
+include "cos.cat"
+
+(* Atomic *)
+empty rmw & (fre;coe) as atom
+
+(* Sequential consistency *)
+show sm\id as si
+acyclic po | ((fr | rf | co);sm) as sc
